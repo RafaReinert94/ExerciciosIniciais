@@ -1,29 +1,24 @@
-package e21.api;
+package src;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class Exercicio5 {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 
-		 Scanner sc = new Scanner(System.in);
-
-		 System.out.println( "Oi tudo bem? S/N" );
-
-
-
-		 String resposta = sc.next();
-
-		 String textoExibicao = resposta.equalsIgnoreCase("S") ? "Fico feliz por vocÃª" :
-			 resposta.equalsIgnoreCase("N") ? "Espero que melhore" : "Voce digitou errado";;
+		System.out.println("Digite seu ano de nascimento:");
+		int ano = sc.nextInt();
+		int anoatual = 2020;
 		
-		 System.out.println(textoExibicao);
-		 
-		 sc.close();		
-		
-	
-		 
+		if(anoatual - ano < 16) {
+			System.out.println("Você não pode votar.");
+		} else {
+			System.out.println("Você pode votar.");
 		}
-	
-	
+		
+		sc.close();
+	}
+
 }
